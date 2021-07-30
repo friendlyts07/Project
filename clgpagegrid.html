@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            width: 1518px;
+            height: 60px;
+            background: #003a6a;
+            color: white;
+            /* text-align: end; */
+            border-bottom-left-radius: 20px;
+
+        }
+
+        .header .fa {
+            margin-left: 5%;
+            margin-top: 1%;
+            margin-right: 8px;
+
+        }
+
+
+
+        a:link {
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+
+        a:hover {
+            color: #fd5308;
+        }
+
+        .fa:hover {
+            color: #fd5308;
+        }
+
+        .stdcor {
+
+            width: 200px;
+            height: 40px;
+            font-size: 15px;
+            color: white;
+            background-color: #fd5308;
+            text-decoration: none;
+            /* display: inline-block; */
+            /* padding: 20px 30px; */
+            border-radius: 10px;
+            position: absolute;
+            right: 5px;
+            text-align: center;
+            padding-top: 10px;
+            top: 1px;
+
+        }
+
+        .stdcor:hover {
+            background-color: #003a6a;
+            color: #fff;
+
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+
+        .logo {
+            margin-left: 19%;
+            margin-top: 1%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: -100px;
+            font-size: 250%;
+        }
+
+        .menu-bar {
+            background: none;
+            text-align: center;
+            margin-top: 4%;
+            height: 90px;
+            z-index: 5;
+        }
+
+        .menu-bar ul {
+            display: inline-flex;
+            list-style: none;
+            color: black;
+            z-index: 5;
+        }
+
+        .menu-bar ul li {
+
+            width: 120px;
+            margin: 3px;
+            padding: 10px;
+            margin-left: 5%;
+            margin-top: 1.5%;
+            z-index: 5;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: black;
+            z-index: 5;
+        }
+
+        .menu-bar ul li:hover {
+            background: chartreuse;
+            border-radius: 5px;
+            z-index: 5;
+        }
+
+
+        .sub-menu-1 {
+            display: none;
+            z-index: 5;
+
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background: chocolate;
+            margin-top: 10px;
+            margin-left: -15px;
+            z-index: 5;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin: 10px;
+            z-index: 5;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li {
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px double rgb(220, 230, 218);
+            background: transparent;
+            border-radius: 0pt;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+            border-bottom: none;
+            z-index: 5;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+            color: rgb(236, 228, 228);
+            z-index: 5;
+        }
+
+        .fa-angle-right {
+            float: right;
+        }
+
+        .sub-menu-2 {
+            display: none;
+            z-index: 5;
+        }
+
+        .selection:hover .sub-menu-2 {
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 140px;
+            background: rgb(210, 105, 30);
+            z-index: 5;
+        }
+
+
+
+        .logos {
+
+            margin-left: 40%;
+            margin-top: -1.5%;
+            width: 10px;
+            height: 10px;
+            display: inline-flex;
+            color: white;
+
+        }
+
+        .scrolling {
+            overflow: hidden;
+            height: 500px;
+
+        }
+
+        .scrolling figure div {
+            float: left;
+            width: 20%;
+        }
+
+        .scrolling figure img {
+            width: 100%;
+            float: left;
+        }
+
+        .scrolling figure {
+            position: relative;
+            width: 500%;
+            margin: 0px;
+            left: 0;
+            animation: 20s Tirth infinite;
+
+        }
+
+        @keyframes Tirth {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: -100%;
+            }
+
+
+        }
+
+
+        .info {
+
+            margin-top: -5%;
+            margin-left: 10%;
+            margin-right: 10%;
+            display: grid;
+            grid-template-columns: repeat(3, 0.5fr);
+            /* grid-gap: 10px; */
+            position: relative;
+
+
+        }
+
+        .about {
+            background-color: #87cc00;
+            text-align: left;
+            padding: 25px;
+            font-family: sans-serif;
+            font-size: 13px;
+
+            box-sizing: border-box;
+        }
+
+        .vision {
+            background-color: #fd5308;
+            text-align: left;
+            padding: 25px;
+            font-family: sans-serif;
+            font-size: 13px;
+
+            box-sizing: border-box;
+        }
+
+        .Mission {
+            background-color: #00adef;
+            text-align: left;
+            padding: 25px;
+            font-family: sans-serif;
+            font-size: 13px;
+
+            box-sizing: border-box;
+        }
+
+        .princ {
+            font-size: 12px;
+            margin-top: 7%;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            justify-items: end;
+            /* margin-left: 10%;
+            margin-right: 10%; */
+            background-color: #f4f4f4;
+        }
+
+        .imgset {
+            display: inline-block;
+            margin: 4%;
+            margin-right: 2%;
+            padding: 10px;
+        }
+
+        .descp {
+            display: inline-block;
+            margin: 4%;
+            padding: 10px;
+            margin-right: 40%;
+            max-width: 455px;
+            height: 120px;
+            justify-items: start;
+            line-height: 175%;
+            font-family: sans-serif;
+
+        }
+
+        .btn {
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+            padding: 15px 25px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+
+        .depart {
+            margin-top: 5%;
+            text-align: center;
+            font-size: 28px;
+            font-family: sans-serif;
+        }
+
+        .dep {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            text-align: center;
+            margin: 5px;
+            padding: 25px;
+            grid-row-gap: 10px;
+            justify-items: center;
+            text-align: left;
+
+        }
+
+        .ec {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .ec:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .ee {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .ee:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .mec {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .mec:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .cil {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cil:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .chem {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .chem:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .gen {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+
+        }
+
+        .gen:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        h3 {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .be {
+
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 7px;
+            width: 1138px;
+            height: 120px;
+            border: 2px solid rgb(247, 246, 246);
+
+        }
+
+
+
+        .co {
+            text-align: center;
+            font-family: 'poppins', sans-serif;
+            font-size: 28px;
+            margin-top: 5%;
+        }
+
+        h2 {
+            text-align: center;
+
+
+        }
+
+        .rm {
+            border-radius: 10px;
+            font-size: 12px;
+            color: white;
+            padding: 10px 15px;
+            background-color: #fd5308;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .rm:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .test {
+            margin-top: 2%;
+            margin-left: 1%;
+            margin-right: 1%;
+            width: 1500px;
+            height: 960px;
+            background-image: url(libr.png);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .te {
+            text-align: center;
+            font-size: 28px;
+            padding-top: 5%;
+        }
+
+        .tm {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            color: white;
+
+            grid-column-gap: 40px;
+            padding: 10px 20px;
+            margin: 5%;
+            /* border: 5px solid black; */
+        }
+
+        .vi {
+            margin: 1%;
+            width: 360px;
+            height: 310px;
+            padding: 20px;
+            background-color: #fd5308;
+            border-radius: 5px;
+            line-height: 23.5px;
+
+
+        }
+
+        .su {
+            margin: 1%;
+            width: 360px;
+            height: 310px;
+            padding: 10px;
+            background-color: #fd5308;
+            border-radius: 5px;
+            line-height: 27px;
+
+        }
+
+        .na {
+            margin: 1%;
+            width: 360px;
+            height: 310px;
+            padding: 10px;
+            background-color: #fd5308;
+            border-radius: 5px;
+            line-height: 24px;
+        }
+
+        hr {
+            color: #fff;
+
+        }
+
+        .pa a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        .st a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .sd a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .acti {
+
+            display: grid;
+            grid-template-columns: repeat(4, 22%);
+            grid-template-rows: repeat(4, 60%);
+            grid-column-gap: 20px;
+            margin-left: 8%;
+            margin-right: auto;
+            align-items: center;
+
+
+        }
+
+        .award img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .nss img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .sport img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .inter img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .yoga img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .technical img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .finish img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: center;
+        }
+
+        .fire img {
+            width: 297.1px;
+            height: 209.71px;
+            align-content: right;
+        }
+
+        .arrow-btn {
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            z-index: 9;
+        }
+
+        .arrow-btn a {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            background-color: #fd5308;
+           
+            display: block;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+
+        .arrow-btn a span {
+            color: white;
+            line-height: 40px;
+            font-size: 27px;
+        }
+        .arrow-btn a span:hover{
+            color: white;
+            background: #fd5308;
+        }
+       
+        
+        .som{
+            background-color: #003261;
+            width: 100%;
+            margin-top: 30px;   
+            height: 260px;
+        }
+        .legalform
+        {
+            margin-top: 9%;
+            margin-left: 400px;
+            color: aliceblue;
+            padding: 30px 0px 0px 0px;
+            margin-bottom: 1%;
+        }
+        .lastlink a{
+            display: block;
+            margin-left: 400px;
+            color: #72acdc;
+            padding: 10px 7px;
+            font-size: 14px;
+            border-bottom: 1px dashed white;
+            max-width: 200px;
+        }
+        .lastlink a:last-child{
+            border-bottom: none;
+        }
+        *{
+            box-sizing: border-box;
+            /* color: rgb(252, 249, 249); */
+        }
+        .lastlink a:hover{
+            color: #fd5308;
+        }
+        footer{
+           
+            padding-top: 20px;
+            bottom: 0px;
+            width: 100%;
+            background: #003a6a;
+            margin-top: -1%;
+            
+        }
+        .main{
+            display: flex;
+
+        }
+        .main .box{
+            flex-basis: 50%;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .main .social .a
+        {
+            padding: 0 4px;
+        }
+        .main .social a span{
+            height: 40px;
+            width: 40px;
+           
+            line-height: 34px;
+            font-size: 18px;
+        }
+        .main .social a span:hover{
+            background: #fd5308;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="arrow-btn">
+        <a href="#"><span class="fa fa-angle-up"></span></a>
+    </div>
+    <div class="header">
+        <i class="fa fa-phone"><a href="tel:+912642227054">+912642227054</a></i>
+        <i class="fa fa-envelope-o"><a href="mailto:gec-bharuch-dte@gujarat.gov.in">gec-bharuch-dte@gujarat.gov.in</a></i>
+
+        <div class="logos">
+            <a href="https://www.facebook.com/tirthshah.dadayouth42/" style="color: white";><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/Happiness_043" style="color: white";><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCZNTZs0ae3gqR4v1qLdMamQ" style="color: white";><i class="fa fa-youtube"></i></a>
+            <a href="https://www.dadabhagwan.tv/" style="color: white";><i class="fa fa-google-plus"></i></a>
+
+            <a href="http://gecbharuch.com/student-corner/" class="stdcor">Student Corner</a>
+        </div>
+    </div>
+
+    <div class="logo">
+        <img src="/photos/clg .jpeg" height="180" width="200">
+        <h1>Government Engineering college Bharuch</h1>
+    </div>
+
+    <div class="menu-bar">
+        <ul>
+            <li><i class="fa fa-home"><a href="http://gecbharuch.com/">Home</i></a></li>
+            <li><i class="fa fa-info"><a href="http://gecbharuch.com/about/">About</i></a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="http://gecbharuch.com/about/about-gec-bharuch/">About Gec
+                                bharuch</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/15Wn1CCNcW7gATVpnENp9O7kDuzVU1YaR/view?usp=sharing">Organization
+                                chart</a></li>
+                        <li><a href="http://gecbharuch.com/about/institute-committees/">Institute-Committees</a>
+                        </li>
+                        <li><a href="http://gecbharuch.com/about/infrastructure/">Infrastructure</a>
+                        </li>
+                        <li><a href="http://gecbharuch.com/about/newsletters/">Newsletters</a>
+                        </li>
+                        <li><a href="http://gecbharuch.com/about/brochure/">Brochure</a></li>
+                        <li class="selection"><a href="http://gecbharuch.com/about/disclosure/">Disclosure<i
+                                    class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="http://gecbharuch.com/about/disclosure/aicte-eoa/">AICTE
+                                            EOA</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/10Llv2vA8JHT068JMTyMVapDrl80VIAE5/view?usp=sharing">NIRF</a>
+                                    </li>
+                                    <li><a href="http://gecbharuch.com/about/disclosure/audited-account-statement/">Audited
+                                            Account Statement</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/academics/">Academics</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="http://gecbharuch.com/academics/be-admissions-and-courses/">BE
+                                Admission and courses</a></li>
+                        <li><a
+                                href="https://s3-ap-southeast-1.amazonaws.com/gtusitecirculars/uploads/Provisional%20Acad.%20Cal-2020-21_761948.pdf">Academics
+                                Calendar</a></li>
+
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/departments/">Department</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="http://gecbharuch.com/departments/chemical-engineering/">Chemical
+                                Engineering</a></li>
+                        <li><a href="http://gecbharuch.com/departments/civil-engineering/">Civil
+                                Engineering</a></li>
+                        <li><a href="http://gecbharuch.com/departments/electrical-engineering/">Electrical
+                                Engineering</a></li>
+                        <li><a href="http://gecbharuch.com/departments/electronics-communication-engineering/">Electronic
+                                &amp; Communication Engineering</a></li>
+                        <li><a href="http://gecbharuch.com/departments/general-department/">General
+                                Department</a></li>
+                        <li><a href="http://gecbharuch.com/departments/mechanical-engineering/">Mechanical
+                                Engineering</a></li>
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/campus/">Campus</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="http://gecbharuch.com/campus/gec-clubs/">GEC-Clubs</a></li>
+                        <li><a href="http://gecbharuch.com/campus/students-cell/">Students-Cell</a>
+                        </li>
+                        <li><a href="http://gecbharuch.com/campus/industrial-training/">Industrial-Training</a>
+                        </li>
+                        <li><a href="http://gecbharuch.com/campus/national-service-scheme/">National
+                                Service Scheme</a></li>
+                        <li><a href="http://gecbharuch.com/campus/sports/">Sports</a></li>
+                        <li><a href="http://gecbharuch.com/campus/tech-feast/">Techfest</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1xgj1mi3Khu8ZAfVHmgAxqlzhOWbxKhmV/view?usp=sharing">Information
+                                and Education Campain (IEC) about Covid 19</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1MiEEnG0oGLLzwNqpPKROBa-zg8NKSn0f/view?usp=sharing">GEC
+                                Bharuch Alumni Association</a></li>
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/placement/">Placement</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a
+                                href="https://drive.google.com/file/d/1fr_kRBAXwIvLPJ4x3HbC0YMldqDk7mT8/view?usp=sharing">About
+                                TPO Cell</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1t39v-5IoPXcr34aEyX8NEncRAS9WzpOy/view?usp=sharing">Placement
+                                Policy</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1x3oje9Iw9gFn_GJ9-Vw2QNsGuCkHLcS3/view?usp=sharing">Placement
+                                Brochure</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1jG58U0hcRGZcVZOlSsF_XyAlUY2ecfTb/view?usp=sharing">Placement
+                                Statistics</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1NvDYLQsXdv5tEIpyOztEojuKiaivy3Yr/view?usp=sharing">TCS
+                                TAAP</a></li>
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/e-cell-ssip-cell/">Ecell/SSIPcell</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="selection"><a href="http://gecbharuch.com/e-cell-ssip-cell/ssip/">SSIP<i
+                                    class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="http://gecbharuch.com/e-cell-ssip-cell/ssip/about-ssip/">About
+                                            SSIP</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/1brNC4NDVWmeQ1dXNPk9NXjh6rIre1E0Y/view?usp=sharing">SSIP
+                                            Committee</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/1S8atGATwhnlYga5X6ABwNSyF6XuLWW68/view?usp=sharing">SSIP
+                                            Awareness Activity</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/1C-FW_4f9cbSenTir05XxAeE-s5xohwCp/view?usp=sharing">Media
+                                            Coverage</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/11IElOBIIdY875-Ds7U1Lifkkl_Hrus8U/view?usp=sharing">Awards
+                                            and Achievements</a></li>
+                                </ul>
+                        </li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1AoSButLKlZ_gQxuSKJHA9w-zEpIUStiB/view?usp=sharing">CV
+                                format</a></li>
+                        <li><a
+                                href="https://drive.google.com/file/d/1LYS_Xdfo8ABgsci9unCJrhvkcHp3xHVi/view?usp=sharing">IPR
+                                and Patent</a></li>
+                        <li><a href="http://gecbharuch.com/e-cell-ssip-cell/research-grant/">Research
+                                Grant</a></li>
+                        <li class="selection"><a href="http://gecbharuch.com/e-cell-ssip-cell/ssip-guidlines/">SSIP
+                                Guidlines<i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/1Msdt5ucl06RV6yQMgwFomMNrzWhVPcmp/view?usp=sharing">Financial
+                                            Guidelines</a></li>
+                                    <li><a
+                                            href="https://drive.google.com/file/d/1DwypP_Vorhwqlmb_Os4eVsco4ECE2Sva/view?usp=sharing">IPR
+                                            Guidelines for SSIP</a>
+                                    </li>
+
+                                </ul>
+                        </li>
+                    </ul>
+            </li>
+            <li><a href="http://gecbharuch.com/circulars/">Circulars</a></li>
+        </ul>
+    </div>
+
+    <div class="scrolling">
+        <figure>
+            <div class="slide"><img src="/photos/slider2.jpg"></div>
+            <div class="slide"><img src="/photos/slider1.jpg"></div>
+        </figure>
+    </div>
+
+    <div class="info">
+        <div class="about">
+            <h2>About</h2><br>
+            <p>Government Engineering College, Bharuch is one of eight New Government Engineering Colleges established
+                in
+                July-2004</p>
+        </div>
+        <div class="vision">
+            <h2>Vision</h2><br>
+            <p>Impart value based Integrative education to empower youth by fostering innovation and leadership ethos
+                for
+                socio-professional needs</p>
+        </div>
+        <div class="Mission">
+            <h2>Mission</h2><br>
+            <p>Strengthen academic infrastructure to achieve excellence in engineering education.
+                Foster talent by developing global mindset… .</p>
+        </div>
+    </div>
+
+    <div class="princ">
+        <div class="imgset"><img src="/photos/S-R-JOSHI-SIR-PHOTO-1024x639.jpeg" height="284" width="455"></div>
+        <div class="descp">
+            <h2>Message From Principal</h2>
+            -----<i class="fa fa-graduation-cap">-----</i><br>
+            <p>Hope you and your family are all well and safe! Our (as well as for the country) primary concern now is
+                on
+                how to tide over this difficult phase of the pandemic. Firstly, I request you follow strictly the health
+                guidelines provided by the state and centrals government agencies so as to help one another safeguard
+                from
+                the virus.<br>
+                <br>
+                In a globally competitive world today, tumultuous changes are taking place. Even the nature of change is
+                changing. Engineering education and services are no exception. Keeping in
+            </p>
+
+
+
+            <div><a href="http://gecbharuch.com/message-from-director/" class="btn">View More</a></div>
+        </div>
+
+    </div>
+    <div class="depart">Academics Department<br>
+        <i class=" fa fa-graduation-cap"></i>
+    </div>
+    <div class="dep">
+        <div><img src="/photos/ec img.jpg" width="291.33" height="193.91"><br> <br>
+            Electronic &amp; <br> Communication Engineering <br> <a
+                href="http://gecbharuch.com/departments/electronics-communication-engineering/" class="ec"> Read More
+            </a>
+        </div>
+        <div><img src="/photos/ee img.jpg" width="291.33" height="193.91"><br> <br>Electrical Engineering <br>
+            <a href="http://gecbharuch.com/departments/electronics-communication-engineering/" class="ee"> Read More</a>
+        </div>
+        <div><img src="/photos/mech img.jpg" width="291.33" height="193.91"><br> <br>Mechanical Engineering<br>
+            <a href="http://gecbharuch.com/departments/mechanical-engineering/" class="mec"> Read More</a>
+        </div>
+        <div><img src="/photos/civ img.jpg" width="291.33" height="193.91"><br> <br>Civil Engineering<br> <a
+                href="http://gecbharuch.com/departments/civil-engineering/" class="cil"> Read More</a></div>
+        <div><img src="/photos/chem img.jpg" width="291.33" height="193.91"><br> <br>Chemical Engineering<br>
+            <a href="http://gecbharuch.com/departments/chemical-engineering/" class="chem"> Read More</a>
+        </div>
+        <div><img src="/photos/gen img.jpg" width="291.33" height="193.91"><br> <br>General<br> <a
+                href="http://gecbharuch.com/departments/general-department/" class="gen">Read More</a></div>
+    </div>
+
+    <div class="co"> Courses<br> <i class=" fa fa-graduation-cap"></i></div>
+    <div class="be">
+        <h3>BE ADMISSION AND COURSES</h3><br>
+        Under Graduate Courses <br>
+        <a href="http://gecbharuch.com/academics/be-admissions-and-courses/" class="rm">Read More</a>
+    </div>
+
+
+    <div class="test">
+        <div class="te">
+            TESTIMONIALS
+        </div>
+        <div class="tm">
+            <div class="vi">
+                <div class="pa"><a href="http://gecbharuch.com/testimonials/raghuram-rastra/"> SAHADADPURI - PARENT </a>
+                </div>
+                <hr> <br> I am very much delighted to see the spacious campus, excellent infrastructure, commitment to
+                the
+                quality education system with experienced faculty members. Students and parents are very happy about
+                this
+                institution.The performance of GEC Bharuch Electrical students in the University exams and the several
+                initiatives that have been implemented for providing high-quality education to students are very
+                praiseworthy.
+            </div>
+            <div class="su">
+                <div class="st"><a href="http://gecbharuch.com/testimonials/mrs-sudana-bric/">SUPREETI NEGI-SOFT SKILLS
+                        TRAINER </a> </div>
+                <hr> <br> I have been conducted various training programs to prepare students for facing interviews in
+                GEC,
+                Bharuch since 2017. Every year has been an enriching experience for me. It is commendable that GEC,
+                Bharuch,
+                as an institution, invests in improving the quality standards of the students and ensures not just the
+                delivery of education but also the personal and professional development of the students
+            </div>
+            <div class="na">
+                <div class="sd"><a href="http://gecbharuch.com/testimonials/mr-rob-roy/">NANDAN VAIDYA-STUDENT </a>
+                </div>
+                <hr> <br> During my graduation journey, the nurturing environment of GEC Bharuch succored not only in
+                cultivating necessary technical skills but also interpersonal skills. Professors here are passionate and
+                they carry an extraordinary combination of field experience & academic knowledge. One can get hands-on
+                experience of management while coordinating various intra-college activities & inter-college national
+                level
+                events.
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="co">Activities<br><i class="fa fa-graduation-cap"></i></div>
+    <div class="acti">
+        <div class="award"><img src="/photos/award.png"></div>
+        <div class="nss"><img src="/photos/NSS-ACTIVITY.jpg"></div>
+        <div class="sport"><img src="/photos/sport.jpg"></div>
+        <div class="inter"><img src="/photos/intern.jpeg"></div>
+        <div class="yoga"><img src="/photos/yoga-day.jpg"></div>
+        <div class="technical"><img src="/photos/technical.jpg"></div>
+        <div class="finish"><img src="/photos/finishing.jpeg"></div>
+        <div class="fire"><img src="/photos/fire.jpg"></div>    
+    </div>
+    <div class="som">
+        <div class="legalform">LEGAL FORM</div>
+        <hr style="background-color: #fd2508; width: 30px; margin-left: 400px; height: 5px; margin-top: -5px;" >
+        <div class="lastlink">
+            <a href="http://gecbharuch.com/about/legal-forms/mou/">MOU</a>
+            <a href="http://gecbharuch.com/about/legal-forms/mandatory-disclosure/">Mandatory Disclosure</a>
+            <a href="http://gecbharuch.com/about/legal-forms/tender-notice/">Tender Notice</a>
+            <a href="http://gecbharuch.com/about/legal-forms/right-to-information-act/">Right to Information Act</a>
+        </div>
+    </div>
+</body>  
+<footer> 
+    <div class="main">
+        <div class="social box">
+            <a href="https://www.facebook.com/tirthshah.dadayouth42/" style="color: white";><span class="fa fa-facebook"></span></a>
+            <a href="https://twitter.com/Happiness_043" style="color: white";><span class="fa fa-twitter"></span></a>
+            <a href="https://www.youtube.com/channel/UCZNTZs0ae3gqR4v1qLdMamQ" style="color: white";><span class="fa fa-youtube"></span></a>
+            <a href="https://www.dadabhagwan.tv/" style="color: white";><span class="fa fa-google-plus"></span></a>
+
+        </div>
+        <div class="center box" style="color: white;"><i class="fa fa-copyright">All Right Reserved 2020</i></div>
+        <div class="right box" style="color: white;">GEC Bharuch</div>
+    </div>
+</footer>
